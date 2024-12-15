@@ -18,8 +18,8 @@ easy tracking and management.
 ## Used Technologies
 
 
-* [![Flask][Flask]][Flask-url]
-* [![SQLite][SQLite]][SQLite-url]
+[![Flask][Flask]][Flask-url]  
+[![SQLite][SQLite]][SQLite-url]
 
 ---
 
@@ -34,7 +34,7 @@ easy tracking and management.
 
 1. **Clone Repository**:  
 ```bash
-git clone https://github.com/kr1pt0n05/SWT-Scrum-Project.git
+git clone https://github.com/kr1pt0n05/BookingApplication_Public.git
 ```
    
 2. **Activate Python Virtual Environment**:  
