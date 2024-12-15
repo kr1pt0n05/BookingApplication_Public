@@ -1,0 +1,42 @@
+/* Standardstil für deaktivierte Buttons */
+button:disabled {
+    background-color: #ccc; / Grau für deaktivierten Button /
+    cursor: not-allowed; / Keine Hover-Aktion /
+}
+
+/* Stil für den aktiven Check-in-Button mit Hover */
+.check-in-btn {
+    background-color: #4CAF50; / Grün /
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Stil für den aktiven Check-out-Button */
+.check-out-btn {
+    background-color: #f44336; / Rot /
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover-Effekt für den Check-In Button */
+.check-in-btn:not(:disabled):hover {
+    background-color: #45a049; / Dunkleres Grün /
+}
+
+/* Hover-Effekt für den Check-Out Button */
+.check-out-btn:not(:disabled):hover {
+    background-color: #b62a28; / Dunkleres Rot */
+}

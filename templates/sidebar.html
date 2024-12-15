@@ -1,0 +1,27 @@
+<div class="sidebar">
+    <div class="profile">
+        <img src="{{ url_for('static', filename='/images/' + user.email + '.png') }}" alt="Profilbild">
+        <div class="profile-info">
+            <h2>{{user.name}} {{user.surname}}</h2>
+            <p>{{user.job_description}}</p>
+        </div>
+    </div>
+    <ul>
+        <li id="calendar_"><a href="#calendar">Calendar</a></li>
+        <li id="statistics_"><a href="#statistics">Statistics</a></li>
+        <li id="vaq_request_"><a href="#vaq_request">Vacation Request</a></li>
+        <li><a href="#submit_worktime">Submit Worktime</a></li>
+    </ul>
+    <div class="button-container">
+        <!-- Settings-Button -->
+        <button id="settingsButton" onclick="showSettings()">
+            <img src="{{ url_for('static', filename='/images/settings.svg') }}" alt="Settings" />
+        </button>
+        <!-- Logout-Button -->
+        <button id="logoutButton">
+            <img src="{{ url_for('static', filename='/images/log_out.svg') }}" alt="Logout" />
+        </button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='sidebar.js') }}"></script> <!-- tms.js -->

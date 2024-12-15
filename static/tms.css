@@ -1,0 +1,220 @@
+/* Grundlegende Stile für die gesamte Seite */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* Stil für die Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 15%;
+    height: 100vh; /* Volle Höhe des sichtbaren Bereichs */
+    background-color: #415a77;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Vertikale Anordnung der Inhalte */
+    justify-content: space-between;
+}
+
+.sidebar .profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #415a77;
+}
+
+.sidebar .profile img {
+    width: 60px;            /* Maximale Breite für die Sidebar */
+    height: 60px;           /* Maximale Höhe für die Sidebar */
+    border-radius: 40%;     /* Rundes Profilbild */
+    object-fit: cover;      /* Bild wird zugeschnitten, um das Seitenverhältnis beizubehalten */
+    margin-right: 10px;
+}
+
+.sidebar .profile-info h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.sidebar .profile-info p {
+    font-size: 0.9em;
+    color: #ccc;
+    margin: 2px 0 0 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0; /* Abstand oben und unten */
+    padding-bottom: 300px;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: block;
+}
+
+.sidebar ul li a:hover{
+    background-color: lightgray;
+    border-radius: 15%;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Styles für den Container der Buttons */
+/* Styles für die Buttons */
+.sidebar button {
+    background-color: transparent; /* Hintergrund transparent */
+    border: none; /* Keine Rahmen */
+    cursor: pointer;
+    width: 30px; /* Feste Breite */
+    height: 30px; /* Feste Höhe */
+    margin: 5px; /* Abstand zwischen den Buttons */
+    display: flex; /* Flexbox für die Bilder */
+    align-items: center; /* Vertikale Zentrierung */
+    justify-content: center; /* Horizontale Zentrierung */
+}
+
+.sidebar button img {
+    width: 32px; /* Größe des Icons */
+    height: 32px; /* Größe des Icons */
+}
+
+/* Positionierung des Logout-Buttons */
+.button-container {
+    display: flex;
+    flex-direction: row; /* Vertikal anordnen */
+    justify-content: space-between;
+}
+
+#settingsButton {
+    align-self: flex-start /* Links ausrichten */
+}
+
+#logoutButton {
+    align-self: flex-end; /* Logout-Button ganz rechts */
+}
+
+/* Stil für das Banner */
+.banner {
+    width: 100%;        
+    height: 100px;
+    background-color: #778da9;
+    color: white;
+    display: flex;
+    align-items: flex-end; /* Verankert den Inhalt am unteren Rand */
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Neu: Stil für den Begrüßungstext im Banner */
+.banner #greeting {
+    position: absolute;
+    top: 15px; /* Abstand von oben */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
+    background-size: 10px 10px;
+    mask-image: linear-gradient(to right, transparent 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, transparent 90%);
+    opacity: 0.5;}
+
+
+/* Stil für den Check-In-Button */
+.check-in-btn {
+    background-color: #4CAF50; /* Grün */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Abstand zum unteren Rand des Banners */
+    z-index: 100;
+}
+
+.check-in-btn:hover {
+    background-color: #45a049;
+}
+
+/* Stil für die Uhrzeit und Check-Out-Button */
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.clock {
+    background-color: lightblue;
+    color: white;
+    font-size: 1.2em;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Stil für den Check-Out-Button */
+.check-out-btn {
+    background-color: #f44336; /* Rot */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Abstand zum unteren Rand des Banners */
+    z-index: 100;
+}
+
+.check-out-btn:hover {
+    background-color: #e53935;
+}
+
+
+/* Grundlegende Stile für den Kalender */
+#calendar {
+    margin-top: 20px;
+    max-width: 100%;
+    background-color: rgb(234, 246, 251);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stil für den Hauptinhalt */
+.content {
+    margin-left: 15%; /* Platz für die Sidebar */
+    width: 85%;
+}
+

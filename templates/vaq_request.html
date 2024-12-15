@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='vaq_request.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="vacation-request-section">
+        <h2>Vacation Request</h2>
+        <button id="vacationRequestBtn" class="vacation-request-btn">Request New Vacation</button>
+
+        <ul id="vacationRequestList" class="vacation-request-list"></ul>
+    </section>
+
+    <!-- Modal für den Urlaub -->
+    <div id="vacationModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Request Vacation</h2>
+        <p>Select the start and end dates for your vacation:</p>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate">
+        <button id="submitVacationRequest">Submit Request</button>
+        <p id="vacationDaysLeft">Days Left: 30</p>
+        <p id="errorMsg" style="color: red;"></p>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='vaq_request.js') }}"></script> <!-- vaq_request.js -->
+{% endblock %}
+

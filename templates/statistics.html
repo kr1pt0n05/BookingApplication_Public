@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='statistics.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="statistics-section">
+    <h2>Statistics</h2>
+    <ul id="statisticsList" class="statistics-list">
+        <li><h3>Urlaub: {{statistics.vacation_days}} Tage</h3></li>
+        <li><h3>Gleitzeit: {{ (statistics.flex_time/60) | round }} Stunden</h3></li>
+    </ul>
+</section>
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
